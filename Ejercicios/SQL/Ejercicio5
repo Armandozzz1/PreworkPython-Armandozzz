@@ -1,0 +1,17 @@
+-- 1. Crea una nueva columna llamada "telefono" de tipo cadena de texto en la tabla "Clientes"
+ALTER TABLE Clientes ADD telefono VARCHAR(20);
+
+-- 2. Modifica la columna "telefono" en la tabla "Clientes" para cambiar su tipo de datos a entero
+ALTER TABLE Clientes MODIFY telefono INT;
+
+-- 3. Elimina la columna "telefono" de la tabla "Clientes"
+ALTER TABLE Clientes DROP COLUMN telefono;
+
+-- 4. Cambia el nombre de la tabla "Clientes" a "Usuarios"
+ALTER TABLE Clientes RENAME TO Usuarios;
+
+-- 5. Cambia el nombre de la columna "nombre" en la tabla "Usuarios" a "nombre_completo"
+ALTER TABLE Usuarios RENAME COLUMN nombre TO nombre_completo;
+
+-- 6. Agrega una restricción de clave primaria a la columna "id" en la tabla "Usuarios"
+ALTER TABLE Usuarios ADD CONSTRAINT pk_usuarios PRIMARY KEY (id);
